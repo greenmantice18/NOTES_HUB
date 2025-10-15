@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cs-Note lab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cs.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <a href="/home" class="home-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="">
+        </a>
+        
+        <div class="header-content">
+            <h1>printf("Welcome To Computer Science!");</h1>
+        </div>
+    </header>
+    <main>
+        <div class="button-group">
+            <button onclick="toggleSubjects('FY')">FYBSc CS</button>
+            <button onclick="toggleSubjects('SY')">SYBSc CS</button>
+            <button onclick="toggleSubjects('TY')">TYBSc CS</button>
+        </div>
+
+        <div id="FY" class="subjects">
+            <h2>Semester I Subjects</h2>
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Download</th>
+                        <th>flashcard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C Programming</td>
+                        <td><button onclick="downloadFile(1)">Download</button></td>
+                        <td><button onclick="showFlashcard('C Programming', 'C is a general-purpose programming language that is extremely fast and widely used in system programming.')">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Web Designing</td>
+                        <td><button onclick="downloadFile(2)">Download</button></td>
+                    <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    <tr>
+                        <td>Graph Theory</td>
+                        <td><button onclick="downloadFile(3)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Business Mathematics</td>
+                        <td><button onclick="downloadFile(4)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+            
+                    <tr>
+                        <td>English</td>
+                        <td><button onclick="downloadFile(5)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Electronics</td>
+                        <td><button onclick="downloadFile(6)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h2>Semester II Subjects</h2>
+            <div class="table-box">
+            <table>
+                       <th>Subjects</th>
+                        <th>Download</th>
+                        <th>flashcard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Advance C programming</td>
+                        <td><button onclick="downloadFile(7)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>DBMS</td>
+                        <td><button onclick="downloadFile(8)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Digital Electonics</td>
+                        <td><button onclick="downloadFile(9)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>DRC</td>
+                        <td><button onclick="downloadFile(10)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td><button onclick="downloadFile(11)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <div id="SY" class="subjects">
+           
+            <h2>Semester III Subjects</h2>
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Download</th>
+                        <th>flashcard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DSA</td>
+                        <td><button onclick="downloadFile(12)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>DBMS</td>
+                        <td><button onclick="downloadFile(13)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Operating Systems</td>
+                        <td><button onclick="downloadFile(14)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td><button onclick="downloadFile(15)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Software Engineering</td>
+                        <td><button onclick="downloadFile(16)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Numerical Method</td>
+                        <td><button onclick="downloadFile(17)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h2>Semester IV Subjects</h2>
+            <div class="table-box">
+            <table>
+                       <th>Subjects</th>
+                        <th>Download</th>
+                        <th>flashcard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Object Oriented Programming</td>
+                        <td><button onclick="downloadFile(18)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Theory of Computation</td>
+                        <td><button onclick="downloadFile(19)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>AI & ML Basics</td>
+                        <td><button onclick="downloadFile(20)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Software testing</td>
+                        <td><button onclick="downloadFile(21)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Internet Of Things</td>
+                        <td><button onclick="downloadFile(22)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Microprocessor & Assembly Language</td>
+                        <td><button onclick="downloadFile(23)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+
+        </div>
+
+        <div id="TY" class="subjects">
+           
+            <h2>Semester V Subjects</h2>
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Download</th>
+                        <th>flashcard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Science & Big Data</td>
+                        <td><button onclick="downloadFile(24)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ethical Hacking & Cyber Security</td>
+                        <td><button onclick="downloadFile(25)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Computing</td>
+                        <td><button onclick="downloadFile(26)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Computing</td>
+                        <td><button onclick="downloadFile(27)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Advanced Algorithms</td>
+                        <td><button onclick="downloadFile(28)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+
+            <h2>Semester VI Subjects</h2>
+            <div class="table-box">
+            <table>
+                       <th>Subjects</th>
+                        <th>Download</th>
+                        <th>flashcard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deep Learning</td>
+                        <td><button onclick="downloadFile(29)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Techonology</td>
+                        <td><button onclick="downloadFile(30)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Full Stack Development(MERN/MEAN)</td>
+                        <td><button onclick="downloadFile(31)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    <tr>
+                        <td>Distributed Computing</td>
+                        <td><button onclick="downloadFile(32)">Download</button></td>
+                        <td><button onclick="showFlashcard()">Show Flashcard</button></td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Notes Hub. All rights reserved.<a href="/privacy">Privacy Policy</a>|<a href="/terms">Terms of Service</a></p>
+            
+        </div>
+    </footer>
+    <!-- Flashcard Popup Modal -->
+    <div id="flashcardModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFlashcard()">&times;</span>
+            <h2 id="flashcard-title"></h2>
+            <p class="flashcard" id="flashcard-text"></p>
+        </div>
+    </div>
+    <script>
+        function toggleSubjects(semester) {
+            const allSubjects = document.querySelectorAll('.subjects');
+            allSubjects.forEach(subject => {
+                if (subject.id === semester) {
+                    subject.classList.toggle('active');
+                } else {
+                    subject.classList.remove('active');
+                }
+            });
+        }
+
+        function downloadFile(fileId) {
+        fetch(`/download/${fileId}`)
+        .then(response => {
+            if (response.ok) {
+                window.location.href = `/download/${fileId}`;
+            } else {
+                return response.json();
+            }
+        })
+        .then(data => {
+            if (data && data.error) {
+                showPopup(data.error);
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    }
+
+    function showPopup(message) {
+        let popup = document.createElement("div");
+        popup.innerHTML = `<div class="popup-overlay">
+                              <div class="popup-box">
+                                  <p>${message}</p>
+                                  <button onclick="closePopup()">OK</button>
+                              </div>
+                           </div>`;
+        document.body.appendChild(popup);
+    }
+
+    function closePopup() {
+        document.querySelector(".popup-overlay").remove();
+    }
+    function showFlashcard(subject, content) {
+            document.getElementById("flashcard-title").innerText = subject;
+            document.getElementById("flashcard-text").innerText = content;
+            document.getElementById("flashcardModal").style.display = "block";
+        }
+
+        function closeFlashcard() {
+            document.getElementById("flashcardModal").style.display = "none";
+        }
+    </script>
+   
+</body>
+</html>

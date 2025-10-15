@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap" rel="stylesheet">
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Notes Hub</h1>
+        </div>  
+    </header>
+    <main>
+    <div class="login-container login-box">
+            <!-- Login Form -->
+            <div id="login-form">
+                <h2>Login!</h2>
+                <form id="loginForm" method="POST">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <button type="submit">Login</button>
+                    <div class="create-account-link">
+                        <p>Don't have an account? <span id="signup-link">Create one</span></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" class="hidden">
+                <h2>Create an Account</h2>
+                <form id="signupForm" method="POST" action="{{ url_for('create_account') }}">
+                    <div class="input-group">
+                        <label for="new-username">Username</label>
+                        <input type="text" id="new-username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="new-password">Password</label>
+                        <input type="password" id="new-password" name="password" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
+                    <button type="submit">Create</button>
+                    <div class="login-link">
+                        <p>Already have an account? <span id="login-link">Login</span></p>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Notes Hub. All rights reserved.<a href="/privacy">Privacy Policy</a>|<a href="/terms">Terms of Service</a></p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const signupLink = document.getElementById('signup-link');
+    const loginLink = document.getElementById('login-link');
+    const loginForm = document.getElementById('login-form');
+    const signupForm = document.getElementById('signup-form');
+
+    if (signupLink && loginLink && loginForm && signupForm) {
+        signupLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            loginForm.classList.add('hidden');
+            signupForm.classList.remove('hidden');
+        });
+
+        loginLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            signupForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        });
+    }
+});
+
+</script>
+
+
+</body>
+</html>

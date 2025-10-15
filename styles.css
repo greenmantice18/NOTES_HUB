@@ -1,0 +1,188 @@
+:root {
+    --primary-bg: antiquewhite;
+    --login-bg: blanchedalmond;
+    --input-bg: white;
+    --btn-bg: #4cafad;
+    --btn-hover-bg: #4cafadc1;
+    --shadow-color: rgba(0, 0, 0, 0.877);
+    --font-family: 'sour gummy', sans-serif;
+}
+
+
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height: 100vh;
+
+} 
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    
+}
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+header .header-content h1 {
+    font-size: 90px;
+    font-family: 'Sour gummy', serif;
+  font-weight:400px;
+  font-style: normal;
+    margin: 0;
+    color: #434141;
+}
+
+.login-box {
+    background-color: var(--login-bg);
+    padding: 30px;
+    box-shadow: 8px 8px 0 var(--shadow-color);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.51);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    font-size: 14px;
+}
+
+button {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color:#4cafad ;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+button:hover {
+    background-color: #fff;
+  color: #4cafad;
+  border: 2px solid #4cafad ;
+  box-shadow: 5px 5px 0px #4cafad;
+}
+button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
+  
+.form-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid var(--btn-bg);
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.create-account-link, .login-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.create-account-link span, .login-link span {
+    color:#4cafad;
+    cursor: pointer;
+}
+
+.create-account-link span:hover, .login-link span:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px ;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0%;
+   
+    
+    
+}
+
+footer .footer-content {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer a {
+    color: var(--footer-text);
+    text-decoration: none;
+    margin: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

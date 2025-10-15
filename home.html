@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Note Lab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Notes Hub</h1>
+        </div>
+    </header>
+    <main>
+       
+        <div class="home-content">
+            <section class="button-section"> 
+                <h2>Welcome fellow students!</h2>        
+            </section>
+            <section class="button-section">
+                <h3>Choose Your Domain</h3>
+                <div class="button-container">
+                    <button onclick="location.href='/cs'">Computer Science</button>
+                    <button onclick="location.href='/cyber'">Cyber Security</button>
+                </div>
+            </section>
+        </div>
+
+        <div class="about-container">
+            <h2>About us</h2>
+            <p>At NOTES HUB, we focus on empowering computer science and cyber security students by providing a centralized hub for study materials. Our platform allows you to log in and explore a vast collection of notes, ensuring you have the resources you need to succeed in your studies. Join us at NOTES HUB and elevate your learning experience</p>
+        </div>
+
+        <section class="contact">
+        <div class="home-contact">
+            <h2>Contact us</h2>
+            <p>Have questions or need assistance? We're here to help!</p>
+            <p>Email: <a href="mailto:noteshub@gmail.com">noteshub@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919999999XXX">+919999999XXX</a></p>
+        </div>
+        
+    </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Notes Hub. All rights reserved.<a href="/privacy">Privacy Policy</a>|<a href="/terms">Terms of Service</a></p>
+            
+        </div>
+    </footer>
+</body>
+</html>

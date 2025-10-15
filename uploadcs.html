@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cs-Note lab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cs.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rock+3D&family=Syne+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/admin" class="home-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="">
+            </a>
+            <h1>printf("Welcome To Computer Science!");</h1>
+        </div>
+    </header>
+    <main>
+        <div class="button-group">
+            <button onclick="toggleSubjects('FY')">FYBSc CS</button>
+            <button onclick="toggleSubjects('SY')">SYBSc CS</button>
+            <button onclick="toggleSubjects('TY')">TYBSc CS</button>
+        </div>
+
+        <div id="FY" class="subjects">
+            <h2>Semester I Subjects</h2>
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C Programming</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_001">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="001">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Web Designing</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_002">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="002">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Graph Theory</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_003">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="003">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Business Mathematics</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_004">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="004">Upload</button></td>
+                    </tr>
+            
+                    <tr>
+                        <td>English</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_005">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="005">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Electronics</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_006">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="006">Upload</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h2>Semester II Subjects</h2>
+            <div class="table-box">
+            <table>
+                       <th>Subjects</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Advance C programming</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_007">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="007">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>DBMS</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_008">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="008">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Digital Electonics</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_009">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="009">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>DRC</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_010">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="010">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_011">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="011">Upload</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+        </div>
+
+        <div id="SY" class="subjects">
+           
+            <h2>Semester III Subjects</h2>
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DSA</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_012">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="012">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>DBMS</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_013">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="013">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Operating Systems</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_014">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="014">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Computer Networks</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_015">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="015">Upload</button></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Software Engineering</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_016">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="016">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Numerical Method</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_017">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="017">Upload</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h2>Semester IV Subjects</h2>
+            <div class="table-box">
+            <table>
+                       <th>Subjects</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Object Oriented Programming</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_018">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="018">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Theory of Computation</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_019">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="019">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>AI & ML Basics</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_020">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="020">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Software testing</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_021">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="021">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Internet Of Things</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_022">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="022">Upload</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Microprocessor & Assembly Language</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_023">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="023">Upload</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+
+        </div>
+
+        <div id="TY" class="subjects">
+           
+            <h2>Semester V Subjects</h2>
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Science & Big Data</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_024">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="024">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ethical Hacking & Cyber Security</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_025">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="025">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile Computing</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_026">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="026">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Computing</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_027">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="027">Upload</button></td>
+                    </tr>
+            
+                    <tr>
+                        <td>Advanced Algorithms</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_028">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="028">Upload</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </div>
+
+            <h2>Semester VI Subjects</h2>
+            <div class="table-box">
+            <table>
+                       <th>Subjects</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Deep Learning</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_029">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="029">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Blockchain Techonology</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_030">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="030">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Full Stack Development(MERN/MEAN)</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_031">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="031">Upload</button></td>
+                    </tr>
+                    <tr>
+                        <td>Distributed Computing</td>
+                        <td>
+                            <input class="fileInput" type="file" name="file" id="file_032">
+                            <button class="uploadBtn" style="width: 100px;" type="submit" data-id="032">Upload</button></td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            </div>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Notes Hub. All rights reserved.<a href="/privacy">Privacy Policy</a>|<a href="/terms">Terms of Service</a></p>
+            
+        </div>
+    </footer>
+    <script>
+        function toggleSubjects(semester) {
+            const allSubjects = document.querySelectorAll('.subjects');
+            allSubjects.forEach(subject => {
+                if (subject.id === semester) {
+                    subject.classList.toggle('active');
+                } else {
+                    subject.classList.remove('active');
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".uploadBtn").forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                let subject_Id = this.getAttribute("data-id");  // Get numeric subject ID from button
+                let fileInput = document.getElementById("file_" + subject_Id);  // Find the matching input field
+                let file = fileInput.files[0];
+
+                if (!file) {
+                    alert("Please select a file before uploading!");
+                    return;
+                }
+
+                let formData = new FormData();
+                formData.append("file", file);
+                formData.append("subject_id", subject_Id);  
+
+                console.log("Uploading file for Subject ID:", subject_Id);  
+
+                fetch("/upload", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => console.error("Error:", error));
+            });
+        });
+    });
+
+    </script>
+</body>
+</html>
